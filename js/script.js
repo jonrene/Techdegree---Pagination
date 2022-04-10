@@ -18,7 +18,7 @@ function showPage(list, page){
 
    // This creates a reference/element to the student list and makes the list empty
    let studentList = document.getElementsByClassName("student-list")[0];
-
+ 
    // Initializes student list element to empty string
    studentList.innerHTML = "";
 
@@ -100,12 +100,14 @@ function addPagination(){
       buttonList.appendChild(listButton);
    }
 
+   
+
 
    // adds event listener to first button
    buttonList.firstElementChild.addEventListener('click', (e) => {
       //finds all active buttons
       const activeButton = buttonList.getElementsByClassName('active')[0];
-      activeButton.className = "inactive";
+      activeButton.className = "inactive"; 
       e.target.className = 'active';
       showPage(data, e.target.value);
    })
